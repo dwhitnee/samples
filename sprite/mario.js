@@ -30,6 +30,9 @@ function drawScene() {
 }
 
 
-// Event Handlers
-$(".go").on("click", drawScene );
-$(".action").on("click", changeDirection );
+// After page is loaded, add click handlers
+$(document).ready(function() {
+  // Event Handlers
+  $(".go").on("click", drawScene );
+  $(".action").on("click", changeDirection );
+});
