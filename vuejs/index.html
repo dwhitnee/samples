@@ -1,0 +1,22 @@
+<head>
+  <title>VueJS Example App</title>
+</head>
+  
+<div id="myVueApp">
+  This is a demonstration of an event-driven application using Vue.js
+  
+  <div>{{ message }}</div>  
+ 
+  <p></p>
+  
+  <li v-for="state in states">{{state}} </li>
+
+  <input v-model.trim="newState" 
+         v-on:keyup.enter="addState"
+         placeholder="state" size="5"></input>
+  <button v-on:click="addState">Add State</button>
+
+</div>
+
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
