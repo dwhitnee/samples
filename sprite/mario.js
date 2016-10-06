@@ -1,8 +1,3 @@
-// Event Handlers
-$(".go").on("click", drawScene );
-$(".action").on("click", changeDirection );
-
-
 // mario's directions
 var x = 200, y =0;
 var direction = 1;
@@ -33,3 +28,8 @@ function drawScene() {
   moveMario();
   window.requestAnimationFrame( drawScene );
 }
+
+
+// Event Handlers
+$(".go").on("click", drawScene );
+$(".action").on("click", changeDirection );
