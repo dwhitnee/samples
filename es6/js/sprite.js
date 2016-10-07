@@ -34,13 +34,13 @@ class Sprite {
    */
   update( elapsedTime ) {
     if (this.running) {
-      var distance = elapsedTime/5;
+      var distance = elapsedTime / 5;
       this.x += distance * this.direction;
       this.cel = (this.cel + 1) % 7;
     }
 
     // update sprite css, ex: "background-position: -120px 0px"
-    this.css["background-position"] = this.cel * -this.celWidth + "px 0";
+    this.css["background-position"] = this.cel * -this.width + "px 0";
 
     // update position css
     this.css.left = this.x + "px";
