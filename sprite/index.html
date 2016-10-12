@@ -1,6 +1,7 @@
 <head>
   <title>It's Mario</title>
   
+  <!-- These are the styles (CSS) that makes Mario show up.  It can also be in a separate file. -->
   <style>
     .mario {
       background: url(http://i59.tinypic.com/jpkk6f.jpg);
@@ -16,12 +17,15 @@
 
 
 <body>
-  <div class="mario"></div> 
+  <div class="mario"></div>    <!-- This is the div we will move around the screen -->
+  
   <button class="go">Go</button>
   <button class="action">Look out, Mario!</button>
 
-
+  <!-- This is the "$" library that lets us select divs and make them clickable. Ex: $(".mario").on("click", functionName ); -->
   <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- This is our Javascript that gets included to handle button clicks, and move the mario div around -->
   <script src="mario.js"></script>
 </body>
   
