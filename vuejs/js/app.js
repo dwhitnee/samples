@@ -6,7 +6,9 @@
 // 2016 David Whitney
 //----------------------------------------
 
-var now = new Date();
+let now = new Date();
+
+let serverURL = "https://htlz8qbag4.execute-api.us-east-1.amazonaws.com/dev";
 
 // Our data and methods that can be seen directly on the web
 // page go here.  Other objects can go elsewhere
@@ -28,6 +30,13 @@ new Vue({
       this.states.push( this.newState );
       this.newState = "";
       console.log( this.states );
+    },
+    
+    loadBusRoutes: function() {
+      fetch( serverURL + "/bussy-mcbus").then( 
+        function( data ) {
+          console.log( data );
+      });
     }
   }
 })
