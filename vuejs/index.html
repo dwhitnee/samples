@@ -19,7 +19,7 @@
 
   <div style="padding-top: 4em;">
     <button v-on:click="loadBusRoutes">Show buses</button>
-    <div id="routes"></div>
+    <li v-for="bus in buses">{{ bus }} </li>
   </div>
 
 </div>
