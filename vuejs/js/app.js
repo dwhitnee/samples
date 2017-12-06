@@ -34,11 +34,10 @@ new Vue({
     
     loadBusRoutes: function() {
       fetch( serverURL + "/bussy-mcbus").
-        then( function(response) { if (response.ok) { return response.json(); }}).
+        then( function( response ) { if (response.ok) { return response.json(); }}).
         then( function( data ) {
           console.log( data );
-        }
-      });
+        });
     }
   }
 })
