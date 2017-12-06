@@ -17,6 +17,11 @@
          placeholder="state" size="5"></input>
   <button v-on:click="addState">Add State</button>
 
+  <div style="padding-top: 4em;">
+    <button v-on:click="loadBusRoutes">Show buses</button>
+    <div id="routes"></div>
+  </div>
+
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
