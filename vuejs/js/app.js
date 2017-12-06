@@ -38,7 +38,7 @@ new Vue({
         then( function( response ) { if (response.ok) { return response.json(); }}).
         then( function( data ) {
           console.log( data );
-          self.data.buses = data.busRoutes;
+          self.buses = data.busRoutes;
         });
     }
   }
