@@ -20,7 +20,8 @@ new Vue({
   data: {
     message: "Hello Vue.js! It's " + now.toDateString(),
     newState: "",
-    states: ["WA","OR","CA"]
+    states: ["WA","OR","CA"],
+    buses: []
   },
 
 
