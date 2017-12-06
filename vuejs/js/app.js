@@ -33,10 +33,12 @@ new Vue({
     },
     
     loadBusRoutes: function() {
+      let self = this;  // so we can access Vue object inside async then() functions
       fetch( serverURL + "/bussy-mcbus").
         then( function( response ) { if (response.ok) { return response.json(); }}).
         then( function( data ) {
           console.log( data );
+          self.data.buses = data.busRoutes;
         });
     }
   }
