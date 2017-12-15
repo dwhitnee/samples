@@ -34,7 +34,11 @@ new Vue({
     },
     
     loadBusRoutes: function() {
-      let self = this;  // so we can access Vue object inside async then() functions
+      // save "this" so we can access our Vue object inside async then() functions
+      // by the time the data is returned, loadBusRoutes() has exited, our context is no longer the Vue object
+      // but "self" sticks around since it was defined here. This is a "closure".
+      let self = this;
+      
       fetch( serverURL + "/bussy-mcbus").
         then( function( response ) { if (response.ok) { return response.json(); }}).
         then( function( data ) {
