@@ -33,9 +33,10 @@ new Vue({
       console.log( this.states );
     },
     
+    // Go to the URL data has our data and display it
     loadBusRoutes: function() {
-      // save "this" so we can access our Vue object inside async then() functions
-      // by the time the data is returned, loadBusRoutes() has exited, our context is no longer the Vue object
+      // Store "this" so we can access our Vue object inside the asynchronous then() functions.
+      // By the time the data is returned from the cloud, loadBusRoutes() has exited, and our context is no longer the Vue object
       // but "self" sticks around since it was defined here. This is a "closure".
       let self = this;
       
