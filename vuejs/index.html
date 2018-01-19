@@ -1,18 +1,18 @@
 <head>
   <title>VueJS Example App</title>
 </head>
-  
+
 <div id="myVueApp">
   This is a demonstration of an event-driven application using Vue.js
   (<a href=http://codepen.io/dwhitnee/pen/mAXEoJ>codepen</a>)
-  
-  <div>{{ message }}</div>  
- 
+
+  <div>{{ message }}</div>
+
   <p></p>
-  
+
   <li v-for="state in states">{{state}} </li>
 
-  <input v-model.trim="newState" 
+  <input v-model.trim="newState"
          v-on:keyup.enter="addState"
          placeholder="state" size="5"></input>
   <button v-on:click="addState">Add State</button>
@@ -22,7 +22,20 @@
     <li v-for="bus in buses">{{ bus }} </li>
   </div>
 
+  <br>
+
+  <input v-model.trim="busComment"
+         v-on:keyup.enter="saveComment"
+         placeholder="what's happening on the bus?" size="40"></input>
+  <button v-on:click="saveComment">Submit</button>
+
+
+  <li v-for="event in busEvents">
+    "{{ event.comment }}" - ({{ event.userName}}, {{ event.day }} )  </li>
+
+  <code>{{ debug }}</code>
 </div>
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
 <script src="js/app.js"></script>
