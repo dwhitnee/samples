@@ -9,7 +9,7 @@
 
 let now = new Date();
 
-let serverURL = "https://4h7s7kx4f9.execute-api.us-west-2.amazonaws.com/dev/";
+let serverURL = "https://i526t8ar6k.execute-api.us-west-2.amazonaws.com/dev/";
 
 // Our data and methods that can be seen directly on the web
 // page go here.  Other objects can go elsewhere
