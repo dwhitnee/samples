@@ -7,6 +7,8 @@
 //----------------------------------------
 /*global fetch, Vue, Headers */
 
+let API_KEY = "AIzaSyCSzD9haJ-HWTjwRef7MuNL_lUtXJiYfic";
+
 let now = new Date();
 
 let serverURL = "https://i526t8ar6k.execute-api.us-west-2.amazonaws.com/dev/";
@@ -25,9 +27,19 @@ let app = new Vue({
     buses: [],
     busComment: "",
     busEvents: [],
+    timeLeft: 0,
+    position: 0,
     debug: ""
   },
 
+  beforeCreate: function() {
+    // find out where we are
+    var self = this;
+    navigator.geolocation.watchPosition( function( position ) {
+      console.log("Location = " + position.coords.latitude, position.coords.longitude );
+      self.position = position.coords;
+    });
+  },
 
   // event handlers accessible from the web page
   methods: {
@@ -58,6 +70,25 @@ let app = new Vue({
           self.busEvents = events;
         });
 
+    },
+
+    // Go to the URL data has our data and display it
+    loadTimeRemaining: function() {
+      let self = this;
+      if (!this.position) {
+        this.timeLeft = "can't figure out your location";
+        return;
+      }
+      let origin = this.position.latitude + "," + this.position.longitude;
+      let dest = "Ingraham High School";
+      let url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest + "&key=" + API_KEY;
+
+      fetch( url, { mode: 'cors' })
+        .then( function( response ) { return response.json();  })
+        .then( function( data ) {
+          console.log( data );
+          self.timeLeft = data.rows[0].elements[0].duration.text;
+        });
     },
 
     // Go to the URL data has our data and display it

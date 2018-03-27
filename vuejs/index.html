@@ -34,8 +34,16 @@
     "{{ event.comment }}" - ({{ event.userName}}, {{ event.day }} )  </li>
 
   <code>{{ debug }}</code>
+
+
+    <hr>
+    <button v-on:click="loadTimeRemaining">Get Time Left</button>
+    <div>Drive time until Ingraham: {{ timeLeft }} </div>
+
 </div>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.15/vue.min.js"></script>
 <script src="js/app.js"></script>
+
+</script>
