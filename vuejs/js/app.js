@@ -29,7 +29,9 @@ let app = new Vue({
     busEvents: [],
     timeLeft: 0,
     position: 0,
-    debug: ""
+    debug: "",
+//    destination: "Ingraham High School",
+    destination: "Space Needle"
   },
 
   beforeCreate: function() {
@@ -81,7 +83,7 @@ let app = new Vue({
       }
       let origin = this.position.latitude + "," + this.position.longitude;
       // let dest = "Ingraham High School";
-      let dest = "Space Needle";
+      let dest = this.destination;
       let url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest + "&key=" + API_KEY;
 
       fetch( url, { mode: 'cors' })
