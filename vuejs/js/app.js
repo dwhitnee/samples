@@ -80,7 +80,8 @@ let app = new Vue({
         return;
       }
       let origin = this.position.latitude + "," + this.position.longitude;
-      let dest = "Ingraham High School";
+      // let dest = "Ingraham High School";
+      let dest = "Space Needle";
       let url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest + "&key=" + API_KEY;
 
       fetch( url, { mode: 'cors' })
