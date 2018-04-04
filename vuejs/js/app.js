@@ -86,7 +86,7 @@ let app = new Vue({
       let dest = this.destination;
       let url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest + "&key=" + API_KEY;
 
-      fetch( url, { mode: 'cors' })
+      fetch( url, { mode: 'no-cors' })
         .then( function( response ) { return response.json();  })
         .then( function( data ) {
           console.log( data );
