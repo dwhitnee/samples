@@ -5,7 +5,7 @@
 //
 // 2016 David Whitney
 //----------------------------------------
-/*global fetch, Vue, Headers */
+/*global fetch, Vue, Headers, google */
 
 let API_KEY = "AIzaSyCSzD9haJ-HWTjwRef7MuNL_lUtXJiYfic";
 
@@ -81,17 +81,26 @@ let app = new Vue({
         this.timeLeft = "can't figure out your location";
         return;
       }
-      let origin = this.position.latitude + "," + this.position.longitude;
-      // let dest = "Ingraham High School";
-      let dest = this.destination;
-      let url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest + "&key=" + API_KEY;
 
-      fetch( url, { mode: 'cors' })
-        .then( function( response ) { return response.json();  })
-        .then( function( data ) {
+      // let busStop = new google.maps.LatLng( 47.6872, -122.27 );
+
+      let busStop = new google.maps.LatLng( this.position.latitude,
+                                            this.position.longitude );
+
+      var googleMaps = new google.maps.DistanceMatrixService();
+      googleMaps.getDistanceMatrix(
+        {
+          origins: [busStop],
+          destinations: [this.destination],
+          travelMode: 'DRIVING',
+          unitSystem: google.maps.UnitSystem.IMPERIAL,
+          avoidHighways: true,
+        }, callback);
+
+      function callback( data, status) {
           console.log( data );
-          self.timeLeft = data.rows[0].elements[0].duration.text;
-        });
+        self.timeLeft = data.rows[0].elements[0].duration.text;
+      }
     },
 
     // Go to the URL data has our data and display it
