@@ -1,8 +1,18 @@
 <head>
   <title>VueJS Example App</title>
+
+<style>
+  [v-cloak] > * {
+    display:none;
+  }
+  [v-cloak]::before {
+    content: "loading...";
+  }
+</style>
 </head>
 
-<div id="myVueApp">
+
+<div id="myVueApp" v-cloak>
   This is a demonstration of an event-driven application using Vue.js
   (<a href=http://codepen.io/dwhitnee/pen/mAXEoJ>codepen</a>)
 

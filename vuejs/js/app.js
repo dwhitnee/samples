@@ -87,7 +87,7 @@ let app = new Vue({
       let busStop = new google.maps.LatLng( this.position.latitude,
                                             this.position.longitude );
 
-      var googleMaps = new google.maps.DistanceMatrixService();
+      let googleMaps = new google.maps.DistanceMatrixService();
       googleMaps.getDistanceMatrix(
         {
           origins: [busStop],
@@ -95,10 +95,11 @@ let app = new Vue({
           travelMode: 'DRIVING',
           unitSystem: google.maps.UnitSystem.IMPERIAL,
           avoidHighways: true,
-        }, callback);
+        }, mapDataLoaded);
 
-      function callback( data, status) {
-          console.log( data );
+      function mapDataLoaded( data, status) {
+        console.log( data );
+
         self.timeLeft = data.rows[0].elements[0].duration.text;
       }
     },
