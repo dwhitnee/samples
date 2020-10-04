@@ -1,16 +1,19 @@
 // mario's directions
-var x = 200, y =0;
+var x = 100, y =0;
 var direction = 1;
 
 
 // step through the animation cels
 var cel = 0;
+var numCels = 6;
+var celWidth = 256;
+var distancePerStep = 10;
 
 function moveMario() {
-  cel = (cel+1)%7;
-  $(".mario").css("background-position", cel*-60 +"px 0");
+  cel = (cel+1) % numCels;
+  $(".mario").css("background-position", cel*-celWidth +"px 0");
  // console.log( direction )
-  x+=10*direction;
+  x += distancePerStep * direction;
 
  $(".mario").css("left", x + "px");
 }
