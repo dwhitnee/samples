@@ -5,4 +5,6 @@ We show only one frame of the below picture at a time using CSS.
 * See it here: http://dwhitnee.github.io/samples/sprite/
 * Edit it here: http://codepen.io/dwhitnee/pen/vXpjWx
 
-<img src="http://i59.tinypic.com/jpkk6f.jpg">
+<img src="sprite.png">
+
+Sprite from https://www.codeandweb.com/texturepacker
