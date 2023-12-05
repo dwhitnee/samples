@@ -1,0 +1,123 @@
+<head>
+  <style>
+/* https://stackoverflow.com/questions/10643426/how-to-add-a-tooltip-to-an-svg-graphic */
+/* Test of svgs with hover text */
+
+body {
+  font-family: verdana;
+  font-size: 15px;
+}
+
+.dialtip {
+  position: relative;
+  display: inline-block;
+}
+.dialtip .tiptxt {
+  visibility: hidden;
+  z-index: 1;
+  width: 300%;
+  background-color: #eee;
+  color: black;
+  border: 2px solid black;
+  border-radius: .5em;
+  padding: .5em 1em;
+
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+.tiptxt div {
+  margin: .5em;
+}
+
+.dialtip:hover .tiptxt {
+  visibility: visible;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+
+
+  <div class="dialtip">
+
+    <div class="tiptxt">
+      <div><b>Overall Match</b> displays an overall assessment which includes a weighted average of all of the displayed measures.
+      </div>
+
+      <div>
+        <b>Importance: </b>Olympic level archers want this within +/- 2.5%.  Elite level archers want this within +/- 5%.  Intermediate level archers want this within +/- 10%.  Beginner level archers want this within +/- 15%.
+      </div>
+
+      <div>
+        100% is Optimum.  Above 100% indicates stiff spine. Below 100% indicates weak spine.
+      </div>
+
+    </div>
+
+
+
+  <svg width="200" height="200"><path d="M-72,-8.817456953860943e-15A72,72,0,1,1,72,0L70,0A70,70,0,1,0,-70,-8.572527594031473e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-50,-6.123233995736766e-15A50,50,0,1,1,50,0L48,0A48,48,0,1,0,-48,-5.878304635907295e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.572527594031473e-15A70,70,0,0,1,-69.9573578913367,-2.44296476917508L-49.969541350954785,-1.7449748351250571A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="black" transform="translate(100,150)"></path><path d="M69.9573578913367,-2.442964769175071A70,70,0,0,1,70,0L50,0A50,50,0,0,0,49.969541350954785,-1.744974835125051Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.57252754031473e-15A70,70,0,0,1,-60.621778264910695,-35.00000000000002L-43.301270189221924,-25.000000000000018A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="red" transform="translate(100,150)"></path><path d="M-60.621778264910695,-35.00000000000002A70,70,0,0,1,-34.999999999999986,-60.62177826491071L-24.999999999999993,-43.30127018922194A50,50,0,0,0,-43.301270189221924,-25.000000000000018Z" fill="yellow" transform="translate(100,150)"></path><path d="M-34.999999999999986,-60.62177826491071A70,70,0,0,1,34.99999999999999,-60.62177826491071L24.999999999999993,-43.30127018922194A50,50,0,0,0,-24.999999999999993,-43.30127018922194Z" fill="lightgreen" transform="translate(100,150)"></path><path d="M-0.6544901623780331,-74.99714422981285A75,75,0,0,1,0.6544901623780423,-74.99714422981285L0.6108574848861728,-69.99733461449199A70,70,0,0,0,-0.6108574848861642,-69.99733461449199Z" fill="black" transform="translate(100,150)"></path><path d="M34.99999999999999,-60.62177826491071A70,70,0,0,1,60.6217782649107,-35L43.30127018922193,-25A50,50,0,0,0,24.999999999999993,-43.30127018922194Z" fill="yellow" transform="translate(100,150)"></path><path d="M60.6217782649107,-35A70,70,0,0,1,70,0L50,0A50,50,0,0,0,43.30127018922193,-25Z" fill="red" transform="translate(100,150)"></path><path d="M1.3783699195964347,-69.98642794402892A70,70,0,0,1,3.8200213651361876,-69.89568968663163L0,0Z" fill="black" transform="translate(100,150)"></path><text x="145" y="170" dy=".35em" style="text-anchor: end;">Overall Match</text><text x="115" y="50" font-size="12" dy=".35em" style="text-anchor: end;">101.1%</text><text x="145" y="190" dy=".35em" style="text-anchor: end;"></text><text x="115" y="25" font-size="12" dy=".35em" style="text-anchor: end;">101.3%</text><text x="70" y="25" dy=".25em" style="text-anchor: end;"></text><text x="64" y="50" dy=".25em" style="text-anchor: end;"></text></svg>
+
+  </div>
+
+
+
+  <div class="dialtip">
+
+  <svg width="200" height="200"><path d="M-72,-8.817456953860943e-15A72,72,0,1,1,72,0L70,0A70,70,0,1,0,-70,-8.572527594031473e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-50,-6.123233995736766e-15A50,50,0,1,1,50,0L48,0A48,48,0,1,0,-48,-5.878304635907295e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.572527594031473e-15A70,70,0,0,1,-69.9573578913367,-2.44296476917508L-49.969541350954785,-1.7449748351250571A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="black" transform="translate(100,150)"></path><path d="M69.9573578913367,-2.442964769175071A70,70,0,0,1,70,0L50,0A50,50,0,0,0,49.969541350954785,-1.744974835125051Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.572527594031473e-15A70,70,0,0,1,-60.621778264910695,-35.00000000000002L-43.301270189221924,-25.000000000000018A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="red" transform="translate(100,150)"></path><path d="M-60.621778264910695,-35.00000000000002A70,70,0,0,1,-34.999999999999986,-60.62177826491071L-24.999999999999993,-43.30127018922194A50,50,0,0,0,-43.301270189221924,-25.000000000000018Z" fill="yellow" transform="translate(100,150)"></path><path d="M-34.999999999999986,-60.62177826491071A70,70,0,0,1,34.99999999999999,-60.62177826491071L24.999999999999993,-43.30127018922194A50,50,0,0,0,-24.999999999999993,-43.30127018922194Z" fill="lightgreen" transform="translate(100,150)"></path><path d="M-0.6544901623780331,-74.99714422981285A75,75,0,0,1,0.6544901623780423,-74.99714422981285L0.6108574848861728,-69.99733461449199A70,70,0,0,0,-0.6108574848861642,-69.99733461449199Z" fill="black" transform="translate(100,150)"></path><path d="M34.99999999999999,-60.62177826491071A70,70,0,0,1,60.6217782649107,-35L43.30127018922193,-25A50,50,0,0,0,24.999999999999993,-43.30127018922194Z" fill="yellow" transform="translate(100,150)"></path><path d="M60.6217782649107,-35A70,70,0,0,1,70,0L50,0A50,50,0,0,0,43.30127018922193,-25Z" fill="red" transform="translate(100,150)"></path><path d="M1.3783699195964347,-69.98642794402892A70,70,0,0,1,3.8200213651361876,-69.89568968663163L0,0Z" fill="black" transform="translate(100,150)"></path><text x="145" y="170" dy=".35em" style="text-anchor: end;">Brace Height</text><text x="115" y="50" font-size="12" dy=".35em" style="text-anchor: end;">101.1%</text><text x="145" y="190" dy=".35em" style="text-anchor: end;">Variance</text><text x="115" y="25" font-size="12" dy=".35em" style="text-anchor: end;">101.3%</text><text x="70" y="25" dy=".25em" style="text-anchor: end;"></text><text x="64" y="50" dy=".25em" style="text-anchor: end;"></text></svg>
+
+      <div class="tiptxt">
+      <div>
+      <b>Brace Height Variance</b> displays the calculated optimal brace height in relation to the current brace height.
+      </div>
+      <div>
+        <b>Importance: </b>An optimal brace height reduces left/right grouping size significantly.
+      </div>
+      <div>
+        100% is Optimum.  Above 100% suggests raising brace height.
+        Below 100% suggests lowering brace height.
+        </div>
+    </div>
+  </div>
+
+
+    <div class="dialtip">
+
+  <svg width="200" height="200"><path d="M-72,-8.817456953860943e-15A72,72,0,1,1,72,0L70,0A70,70,0,1,0,-70,-8.572527594031473e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-50,-6.123233995736766e-15A50,50,0,1,1,50,0L48,0A48,48,0,1,0,-48,-5.878304635907295e-15Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.572527594031473e-15A70,70,0,0,1,-69.9573578913367,-2.44296476917508L-49.969541350954785,-1.7449748351250571A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="black" transform="translate(100,150)"></path><path d="M69.9573578913367,-2.442964769175071A70,70,0,0,1,70,0L50,0A50,50,0,0,0,49.969541350954785,-1.744974835125051Z" fill="black" transform="translate(100,150)"></path><path d="M-70,-8.572527594031473e-15A70,70,0,0,1,-60.621778264910695,-35.00000000000002L-43.301270189221924,-25.000000000000018A50,50,0,0,0,-50,-6.123233995736766e-15Z" fill="red" transform="translate(100,150)"></path><path d="M-60.621778264910695,-35.00000000000002A70,70,0,0,1,-34.999999999999986,-60.62177826491071L-24.999999999999993,-43.30127018922194A50,50,0,0,0,-43.301270189221924,-25.000000000000018Z" fill="yellow" transform="translate(100,150)"></path><path d="M-34.999999999999986,-60.62177826491071A70,70,0,0,1,34.99999999999999,-60.62177826491071L24.999999999999993,-43.30127018922194A50,50,0,0,0,-24.999999999999993,-43.30127018922194Z" fill="lightgreen" transform="translate(100,150)"></path><path d="M-0.6544901623780331,-74.99714422981285A75,75,0,0,1,0.6544901623780423,-74.99714422981285L0.6108574848861728,-69.99733461449199A70,70,0,0,0,-0.6108574848861642,-69.99733461449199Z" fill="black" transform="translate(100,150)"></path><path d="M34.99999999999999,-60.62177826491071A70,70,0,0,1,60.6217782649107,-35L43.30127018922193,-25A50,50,0,0,0,24.999999999999993,-43.30127018922194Z" fill="yellow" transform="translate(100,150)"></path><path d="M60.6217782649107,-35A70,70,0,0,1,70,0L50,0A50,50,0,0,0,43.30127018922193,-25Z" fill="red" transform="translate(100,150)"></path><path d="M1.3783699195964347,-69.98642794402892A70,70,0,0,1,3.8200213651361876,-69.89568968663163L0,0Z" fill="black" transform="translate(100,150)"></path><text x="145" y="170" dy=".35em" style="text-anchor: end;">NockClearance</text><text x="115" y="50" font-size="12" dy=".35em" style="text-anchor: end;">101.1%</text><text x="145" y="190" dy=".35em" style="text-anchor: end;"></text><text x="115" y="25" font-size="12" dy=".35em" style="text-anchor: end;">101.3%</text><text x="70" y="25" dy=".25em" style="text-anchor: end;"></text><text x="64" y="50" dy=".25em" style="text-anchor: end;"></text></svg>
+
+      <div class="tiptxt">
+      <div>
+        <b>Nock Clearance</b> displays the calculated amount of nock
+        clearance as the nock is passing the cushion plunger or arrow
+        rest.
+      </div>
+      <div>
+        <b>Importance: </b>Good clearance is necessary to optimize left/right arrow grouping.
+      </div>
+      <div>
+        <b>Options to improve: </b> heavier arrow, stiffer arrow, higher brace height, forward plunger location, or heavier point. Brace Height Variance displays the calculated optimal brace height in relation to the current brace height.
+      </div>
+      <div>
+        Above 100% is Optimum.  Value below 100% indicates not optimal clearance.
+      </div>
+    </div>
+  </div>
+
+
+</body>
